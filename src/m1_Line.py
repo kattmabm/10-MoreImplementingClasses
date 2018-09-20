@@ -229,8 +229,8 @@ class Line(object):
         self.start = start.clone()
         self.end = end.clone()
         self.clones = 0
-        self.initial.start = self.start
-        self.initial.end = self.end
+        self.initial_start = start
+        self.initial_end = end
 
     def __repr__(self):
         """
@@ -720,7 +720,7 @@ class Line(object):
             print(line2)  # Should print: Line[(0, 1), (10, 20)]
         """
         # --------------------------------------------------------------
-        # TODO: 13.
+        # DONE: 13.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -729,8 +729,8 @@ class Line(object):
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
 
-        self.start = self.initial.start
-        self.end = self.initial.end
+        self.start = self.initial_start
+        self.end = self.initial_end
 
 
 ########################################################################
